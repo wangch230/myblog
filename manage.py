@@ -6,9 +6,10 @@ from sqlalchemy.exc import IntegrityError
 from random import randint
 
 from ext import db
-from app import app
+from app import create_app
 
 
+app = create_app()
 fake = Faker('zh-CN')
 manage = Manager(app)
 Migrate(app, db)
@@ -46,7 +47,7 @@ def fake_post(count=50):
             title=fake.sentence(),
             body=fake.text(2000),
             timestamp=fake.date_time_this_year(),
-            category=Category.query.get(randint(1, Category.query.count))
+            category=Category.query.get(randint(1, Category.query.count()))
         )
         db.session.add(post)
 
@@ -57,7 +58,7 @@ def fake_post(count=50):
 
 
 def fake_comment(count=500):
-    #普通评论
+    # 普通评论
     for i in range(count):
         comment = Comment(
             author=fake.name(),
@@ -71,8 +72,8 @@ def fake_comment(count=500):
 
         db.session.add(comment)
 
-    #admin
-    for i in range(count/10):
+    # admin
+    for i in range(int(count/10)):
         comment = Comment(
             author=fake.name(),
             email=fake.email(),
@@ -85,8 +86,8 @@ def fake_comment(count=500):
         )
         db.session.add(comment)
 
-    #reply
-    for i in range(count/10):
+    # reply
+    for i in range(int(count/10)):
         comment = Comment(
             author=fake.name(),
             email=fake.email(),
@@ -95,12 +96,12 @@ def fake_comment(count=500):
             reviewed=True,
             timestamp=fake.date_time_this_year(),
             post=Post.query.get(randint(1, Post.query.count())),
-            replied=Comment.query.get(randint(Comment.query.count()))
+            replied=Comment.query.get(randint(1, Comment.query.count()))
         )
         db.session.add(comment)
 
-    #unreviewed
-    for i in range(count/10):
+    # unreviewed
+    for i in range(int(count/10)):
         comment = Comment(
             author=fake.name(),
             email=fake.email(),
@@ -123,13 +124,17 @@ def fake_link():
 
 @manage.command
 def forge():
-    fake_admin()
+    # fake_admin()
     print('admin is ok')
-    fake_category()
+    # fake_category()
     print('category is ok')
-    fake_post()
+    # fake_post()
     print('post is ok')
     fake_comment()
     print('commit is ok')
     fake_link()
     print('link is ok')
+
+
+if __name__ == '__main__':
+    manage.run()

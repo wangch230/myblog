@@ -1,12 +1,21 @@
 from flask import Flask
+from ext import db
+from settings import config
 
-app = Flask(__name__)
 
+def create_app(config_name=None):
 
-@app.route('/')
-def hello_world():
-    return 'Hello World!'
+    if config_name is None:
+        config_name = 'development'
+
+    app = Flask(__name__)
+    app.config.from_object(config[config_name])
+
+    db.init_app(app)
+
+    return app
 
 
 if __name__ == '__main__':
+    app = create_app()
     app.run()

@@ -14,7 +14,7 @@ class Admin(db.Model, UserMixin):
     blog_title = db.Column(db.String(100))
     name = db.Column(db.String(60))
     blog_subtitle = db.Column(db.String(60))
-    about = db.Column(db.String(db.Text))
+    about = db.Column(db.Text)
 
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
@@ -48,7 +48,7 @@ class Post(db.Model):
     timestamp = db.Column(db.DateTime, default=datetime.now, index=True)
     can_comment = db.Column(db.Boolean, default=True)
 
-    category_id = db.Integer(db.Integer, db.ForeignKey('category.id'))
+    category_id = db.Column(db.Integer, db.ForeignKey('category.id'))
 
     category = db.relationship('Category', back_populates='posts')
     comments = db.relationship('Comment', back_populates='post', cascade='all,delete-orphan')
