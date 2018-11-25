@@ -1,5 +1,5 @@
 from flask import Flask
-from ext import db
+from ext import db, bootstrap
 from settings import config
 
 
@@ -12,6 +12,7 @@ def create_app(config_name=None):
     app.config.from_object(config[config_name])
 
     db.init_app(app)
+    bootstrap.init_app(app)
 
     return app
 

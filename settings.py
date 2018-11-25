@@ -29,7 +29,7 @@ class BaseConfig(object):
     BLOG_MANAGE_POST_PER_PAGE = 15
     BLOG_COMMENT_PER_PAGE = 15
     # ('主题', '显示')
-    BLOG_THEMES = {'perfect_blue': 'Perfect Blue', 'black_swan': 'Black Swan'}
+    BLOG_THEMES = {'perfect_blue': 'Perfect_Blue', 'black_swan': 'Black_Swan'}
     BLOG_SLOW_QUERY_THRESHOLD = 1
 
 
