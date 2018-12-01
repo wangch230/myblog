@@ -1,0 +1,1806 @@
+2018-11-29 23:15:19,936 - flask.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangchao/Documents/myblog/blueprints/blog.py", line 18, in index
+    return render_template('blog/index.html', posts=posts, pagination=pagination)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/wangchao/Documents/myblog/templates/blog/index.html", line 3, in top-level template code
+    {% from 'bootstrap/pagination.html' import render_pager %}
+  File "/Users/wangchao/Documents/myblog/templates/base.html", line 85, in top-level template code
+    {% block content %}{% endblock content %}
+  File "/Users/wangchao/Documents/myblog/templates/blog/index.html", line 19, in block "content"
+    {% include 'blog/_sidebar.html' %}
+  File "/Users/wangchao/Documents/myblog/templates/blog/_sidebar.html", line 20, in top-level template code
+    <a href="{{ url_for('blog.show_category', category_id=category.id) }}">
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/helpers.py", line 356, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2061, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/helpers.py", line 345, in url_for
+    force_external=external)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 1776, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'blog.show_category' with values ['category_id']. Did you mean 'blog.show_post' instead?
+2018-11-29 23:15:21,618 - flask.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangchao/Documents/myblog/blueprints/blog.py", line 18, in index
+    return render_template('blog/index.html', posts=posts, pagination=pagination)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/wangchao/Documents/myblog/templates/blog/index.html", line 3, in top-level template code
+    {% from 'bootstrap/pagination.html' import render_pager %}
+  File "/Users/wangchao/Documents/myblog/templates/base.html", line 85, in top-level template code
+    {% block content %}{% endblock content %}
+  File "/Users/wangchao/Documents/myblog/templates/blog/index.html", line 19, in block "content"
+    {% include 'blog/_sidebar.html' %}
+  File "/Users/wangchao/Documents/myblog/templates/blog/_sidebar.html", line 20, in top-level template code
+    <a href="{{ url_for('blog.show_category', category_id=category.id) }}">
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/helpers.py", line 356, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2061, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/helpers.py", line 345, in url_for
+    force_external=external)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 1776, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'blog.show_category' with values ['category_id']. Did you mean 'blog.show_post' instead?
+2018-11-29 23:15:26,667 - flask.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangchao/Documents/myblog/blueprints/blog.py", line 18, in index
+    return render_template('blog/index.html', posts=posts, pagination=pagination)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/wangchao/Documents/myblog/templates/blog/index.html", line 3, in top-level template code
+    {% from 'bootstrap/pagination.html' import render_pager %}
+  File "/Users/wangchao/Documents/myblog/templates/base.html", line 85, in top-level template code
+    {% block content %}{% endblock content %}
+  File "/Users/wangchao/Documents/myblog/templates/blog/index.html", line 19, in block "content"
+    {% include 'blog/_sidebar.html' %}
+  File "/Users/wangchao/Documents/myblog/templates/blog/_sidebar.html", line 20, in top-level template code
+    <a href="{{ url_for('blog.show_category', category_id=category.id) }}">
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/helpers.py", line 356, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2061, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/helpers.py", line 345, in url_for
+    force_external=external)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 1776, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'blog.show_category' with values ['category_id']. Did you mean 'blog.show_post' instead?
+2018-11-29 23:15:56,715 - flask.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangchao/Documents/myblog/blueprints/blog.py", line 18, in index
+    return render_template('blog/index.html', posts=posts, pagination=pagination)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/wangchao/Documents/myblog/templates/blog/index.html", line 3, in top-level template code
+    {% from 'bootstrap/pagination.html' import render_pager %}
+  File "/Users/wangchao/Documents/myblog/templates/base.html", line 85, in top-level template code
+    {% block content %}{% endblock content %}
+  File "/Users/wangchao/Documents/myblog/templates/blog/index.html", line 19, in block "content"
+    {% include 'blog/_sidebar.html' %}
+  File "/Users/wangchao/Documents/myblog/templates/blog/_sidebar.html", line 20, in top-level template code
+    <a href="{{ url_for('blog.show_category', category_id=category.id) }}">
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/helpers.py", line 356, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2061, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/helpers.py", line 345, in url_for
+    force_external=external)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 1776, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'blog.show_category' with values ['category_id']. Did you mean 'blog.show_post' instead?
+2018-11-29 23:16:56,762 - flask.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangchao/Documents/myblog/blueprints/blog.py", line 18, in index
+    return render_template('blog/index.html', posts=posts, pagination=pagination)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/wangchao/Documents/myblog/templates/blog/index.html", line 3, in top-level template code
+    {% from 'bootstrap/pagination.html' import render_pager %}
+  File "/Users/wangchao/Documents/myblog/templates/base.html", line 85, in top-level template code
+    {% block content %}{% endblock content %}
+  File "/Users/wangchao/Documents/myblog/templates/blog/index.html", line 19, in block "content"
+    {% include 'blog/_sidebar.html' %}
+  File "/Users/wangchao/Documents/myblog/templates/blog/_sidebar.html", line 20, in top-level template code
+    <a href="{{ url_for('blog.show_category', category_id=category.id) }}">
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/helpers.py", line 356, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2061, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/helpers.py", line 345, in url_for
+    force_external=external)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 1776, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'blog.show_category' with values ['category_id']. Did you mean 'blog.show_post' instead?
+2018-11-29 23:20:40,642 - flask.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangchao/Documents/myblog/blueprints/blog.py", line 18, in index
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/wangchao/Documents/myblog/templates/blog/index.html", line 3, in top-level template code
+    {% from 'bootstrap/pagination.html' import render_pager %}
+  File "/Users/wangchao/Documents/myblog/templates/base.html", line 85, in top-level template code
+    {% block content %}{% endblock content %}
+  File "/Users/wangchao/Documents/myblog/templates/blog/index.html", line 19, in block "content"
+    {% include 'blog/_sidebar.html' %}
+  File "/Users/wangchao/Documents/myblog/templates/blog/_sidebar.html", line 20, in top-level template code
+    <a href="{{ url_for('blog.show_category', category_id=category.id) }}">
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/helpers.py", line 356, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2061, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/helpers.py", line 345, in url_for
+    force_external=external)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 1776, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'blog.show_category' with values ['category_id']. Did you mean 'blog.show_post' instead?
+2018-11-29 23:35:09,243 - flask.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangchao/Documents/myblog/blueprints/blog.py", line 22, in index
+    per_page = current_app.config['BLUELOG_POST_PER_PAGE']
+KeyError: 'BLUELOG_POST_PER_PAGE'
+2018-11-29 23:35:10,686 - flask.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangchao/Documents/myblog/blueprints/blog.py", line 22, in index
+    per_page = current_app.config['BLUELOG_POST_PER_PAGE']
+KeyError: 'BLUELOG_POST_PER_PAGE'
+2018-11-29 23:35:15,717 - flask.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangchao/Documents/myblog/blueprints/blog.py", line 22, in index
+    per_page = current_app.config['BLUELOG_POST_PER_PAGE']
+KeyError: 'BLUELOG_POST_PER_PAGE'
+2018-11-29 23:35:45,749 - flask.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangchao/Documents/myblog/blueprints/blog.py", line 22, in index
+    per_page = current_app.config['BLUELOG_POST_PER_PAGE']
+KeyError: 'BLUELOG_POST_PER_PAGE'
+2018-11-29 23:38:24,676 - flask.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangchao/Documents/myblog/blueprints/blog.py", line 15, in index
+    per_page = current_app.config['BLUELOG_POST_PER_PAGE']
+KeyError: 'BLUELOG_POST_PER_PAGE'
+2018-11-29 23:38:25,943 - flask.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangchao/Documents/myblog/blueprints/blog.py", line 15, in index
+    per_page = current_app.config['BLUELOG_POST_PER_PAGE']
+KeyError: 'BLUELOG_POST_PER_PAGE'
+2018-11-29 23:38:30,965 - flask.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangchao/Documents/myblog/blueprints/blog.py", line 15, in index
+    per_page = current_app.config['BLUELOG_POST_PER_PAGE']
+KeyError: 'BLUELOG_POST_PER_PAGE'
+2018-11-29 23:39:00,993 - flask.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangchao/Documents/myblog/blueprints/blog.py", line 15, in index
+    per_page = current_app.config['BLUELOG_POST_PER_PAGE']
+KeyError: 'BLUELOG_POST_PER_PAGE'
+2018-11-29 23:40:01,037 - flask.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangchao/Documents/myblog/blueprints/blog.py", line 15, in index
+    per_page = current_app.config['BLUELOG_POST_PER_PAGE']
+KeyError: 'BLUELOG_POST_PER_PAGE'
+2018-11-29 23:40:46,797 - flask.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangchao/Documents/myblog/blueprints/blog.py", line 15, in index
+    per_page = current_app.config['BLUELOG_POST_PER_PAGE']
+KeyError: 'BLUELOG_POST_PER_PAGE'
+2018-12-01 12:04:27,701 - flask.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangchao/Documents/myblog/blueprints/blog.py", line 15, in index
+    per_page = current_app.config['BLUELOG_POST_PER_PAGE']
+KeyError: 'BLUELOG_POST_PER_PAGE'
+2018-12-01 12:15:19,852 - flask.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangchao/Documents/myblog/blueprints/blog.py", line 15, in index
+    per_page = current_app.config['BLUELOG_POST_PER_PAGE']
+KeyError: 'BLUELOG_POST_PER_PAGE'
+2018-12-01 12:15:20,389 - flask.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangchao/Documents/myblog/blueprints/blog.py", line 15, in index
+    per_page = current_app.config['BLUELOG_POST_PER_PAGE']
+KeyError: 'BLUELOG_POST_PER_PAGE'
+2018-12-01 12:15:25,417 - flask.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangchao/Documents/myblog/blueprints/blog.py", line 15, in index
+    per_page = current_app.config['BLUELOG_POST_PER_PAGE']
+KeyError: 'BLUELOG_POST_PER_PAGE'
+2018-12-01 12:15:55,445 - flask.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangchao/Documents/myblog/blueprints/blog.py", line 15, in index
+    per_page = current_app.config['BLUELOG_POST_PER_PAGE']
+KeyError: 'BLUELOG_POST_PER_PAGE'
+2018-12-01 12:16:55,480 - flask.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangchao/Documents/myblog/blueprints/blog.py", line 15, in index
+    per_page = current_app.config['BLUELOG_POST_PER_PAGE']
+KeyError: 'BLUELOG_POST_PER_PAGE'
+2018-12-01 12:20:47,851 - flask.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangchao/Documents/myblog/blueprints/blog.py", line 15, in index
+    per_page = current_app.config['BLUELOG_POST_PER_PAGE']
+KeyError: 'BLUELOG_POST_PER_PAGE'
+2018-12-01 12:22:16,747 - flask.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangchao/Documents/myblog/blueprints/blog.py", line 18, in index
+    return render_template('blog/index.html', pagination=pagination, posts=posts)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/wangchao/Documents/myblog/templates/blog/index.html", line 3, in top-level template code
+    {% from 'bootstrap/pagination.html' import render_pager %}
+  File "/Users/wangchao/Documents/myblog/templates/base.html", line 85, in top-level template code
+    {% block content %}{% endblock content %}
+  File "/Users/wangchao/Documents/myblog/templates/blog/index.html", line 19, in block "content"
+    {% include 'blog/_sidebar.html' %}
+  File "/Users/wangchao/Documents/myblog/templates/blog/_sidebar.html", line 36, in top-level template code
+    {% for theme_name, display_name in config.BLUELOG_THEMES.items() %}
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'flask.config.Config object' has no attribute 'BLUELOG_THEMES'
+2018-12-01 12:22:16,847 - flask.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangchao/Documents/myblog/blueprints/blog.py", line 18, in index
+    return render_template('blog/index.html', pagination=pagination, posts=posts)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/wangchao/Documents/myblog/templates/blog/index.html", line 3, in top-level template code
+    {% from 'bootstrap/pagination.html' import render_pager %}
+  File "/Users/wangchao/Documents/myblog/templates/base.html", line 85, in top-level template code
+    {% block content %}{% endblock content %}
+  File "/Users/wangchao/Documents/myblog/templates/blog/index.html", line 19, in block "content"
+    {% include 'blog/_sidebar.html' %}
+  File "/Users/wangchao/Documents/myblog/templates/blog/_sidebar.html", line 36, in top-level template code
+    {% for theme_name, display_name in config.BLUELOG_THEMES.items() %}
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'flask.config.Config object' has no attribute 'BLUELOG_THEMES'
+2018-12-01 12:22:21,906 - flask.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangchao/Documents/myblog/blueprints/blog.py", line 18, in index
+    return render_template('blog/index.html', pagination=pagination, posts=posts)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/wangchao/Documents/myblog/templates/blog/index.html", line 3, in top-level template code
+    {% from 'bootstrap/pagination.html' import render_pager %}
+  File "/Users/wangchao/Documents/myblog/templates/base.html", line 85, in top-level template code
+    {% block content %}{% endblock content %}
+  File "/Users/wangchao/Documents/myblog/templates/blog/index.html", line 19, in block "content"
+    {% include 'blog/_sidebar.html' %}
+  File "/Users/wangchao/Documents/myblog/templates/blog/_sidebar.html", line 36, in top-level template code
+    {% for theme_name, display_name in config.BLUELOG_THEMES.items() %}
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'flask.config.Config object' has no attribute 'BLUELOG_THEMES'
+2018-12-01 12:22:51,980 - flask.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangchao/Documents/myblog/blueprints/blog.py", line 18, in index
+    return render_template('blog/index.html', pagination=pagination, posts=posts)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/wangchao/Documents/myblog/templates/blog/index.html", line 3, in top-level template code
+    {% from 'bootstrap/pagination.html' import render_pager %}
+  File "/Users/wangchao/Documents/myblog/templates/base.html", line 85, in top-level template code
+    {% block content %}{% endblock content %}
+  File "/Users/wangchao/Documents/myblog/templates/blog/index.html", line 19, in block "content"
+    {% include 'blog/_sidebar.html' %}
+  File "/Users/wangchao/Documents/myblog/templates/blog/_sidebar.html", line 36, in top-level template code
+    {% for theme_name, display_name in config.BLUELOG_THEMES.items() %}
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'flask.config.Config object' has no attribute 'BLUELOG_THEMES'
+2018-12-01 12:23:15,133 - flask.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangchao/Documents/myblog/blueprints/blog.py", line 18, in index
+    return render_template('blog/index.html', pagination=pagination, posts=posts)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/wangchao/Documents/myblog/templates/blog/index.html", line 3, in top-level template code
+    {% from 'bootstrap/pagination.html' import render_pager %}
+  File "/Users/wangchao/Documents/myblog/templates/base.html", line 85, in top-level template code
+    {% block content %}{% endblock content %}
+  File "/Users/wangchao/Documents/myblog/templates/blog/index.html", line 19, in block "content"
+    {% include 'blog/_sidebar.html' %}
+  File "/Users/wangchao/Documents/myblog/templates/blog/_sidebar.html", line 36, in top-level template code
+    {% for theme_name, display_name in config.BLUELOG_THEMES.items() %}
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'flask.config.Config object' has no attribute 'BLUELOG_THEMES'
+2018-12-01 12:24:15,227 - flask.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangchao/Documents/myblog/blueprints/blog.py", line 18, in index
+    return render_template('blog/index.html', pagination=pagination, posts=posts)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/wangchao/Documents/myblog/templates/blog/index.html", line 3, in top-level template code
+    {% from 'bootstrap/pagination.html' import render_pager %}
+  File "/Users/wangchao/Documents/myblog/templates/base.html", line 85, in top-level template code
+    {% block content %}{% endblock content %}
+  File "/Users/wangchao/Documents/myblog/templates/blog/index.html", line 19, in block "content"
+    {% include 'blog/_sidebar.html' %}
+  File "/Users/wangchao/Documents/myblog/templates/blog/_sidebar.html", line 36, in top-level template code
+    {% for theme_name, display_name in config.BLUELOG_THEMES.items() %}
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'flask.config.Config object' has no attribute 'BLUELOG_THEMES'
+2018-12-01 12:25:16,989 - flask.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangchao/Documents/myblog/blueprints/blog.py", line 18, in index
+    return render_template('blog/index.html', pagination=pagination, posts=posts)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/wangchao/Documents/myblog/templates/blog/index.html", line 3, in top-level template code
+    {% from 'bootstrap/pagination.html' import render_pager %}
+  File "/Users/wangchao/Documents/myblog/templates/base.html", line 85, in top-level template code
+    {% block content %}{% endblock content %}
+  File "/Users/wangchao/Documents/myblog/templates/blog/index.html", line 19, in block "content"
+    {% include 'blog/_sidebar.html' %}
+  File "/Users/wangchao/Documents/myblog/templates/blog/_sidebar.html", line 36, in top-level template code
+    {% for theme_name, display_name in config.BLOG_THEMES.items() %}
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'flask.config.Config object' has no attribute 'BLUELOG_THEMES'
+2018-12-01 12:25:42,611 - flask.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1816, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1833, in finalize_request
+    response = self.process_response(response)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2112, in process_response
+    response = handler(response)
+  File "/Users/wangchao/Documents/myblog/app.py", line 133, in query_profiler
+    if q.duration >= app.config['BLUELOG_SLOW_QUERY_THRESHOLD']:
+KeyError: 'BLUELOG_SLOW_QUERY_THRESHOLD'
+2018-12-01 12:31:35,003 - flask.app - ERROR - Exception on /post/91 [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangchao/Documents/myblog/blueprints/blog.py", line 76, in show_post
+    return render_template('blog/post.html', post=post, pagination=pagination, form=form, comments=comments)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/wangchao/Documents/myblog/templates/blog/post.html", line 3, in top-level template code
+    {% from 'bootstrap/pagination' import render_pagination %}
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: bootstrap/pagination
+2018-12-01 12:31:35,072 - flask.app - ERROR - Exception on /post/91 [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangchao/Documents/myblog/blueprints/blog.py", line 76, in show_post
+    return render_template('blog/post.html', post=post, pagination=pagination, form=form, comments=comments)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/wangchao/Documents/myblog/templates/blog/post.html", line 3, in top-level template code
+    {% from 'bootstrap/pagination' import render_pagination %}
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: bootstrap/pagination
+2018-12-01 12:31:40,112 - flask.app - ERROR - Exception on /post/91 [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangchao/Documents/myblog/blueprints/blog.py", line 76, in show_post
+    return render_template('blog/post.html', post=post, pagination=pagination, form=form, comments=comments)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/wangchao/Documents/myblog/templates/blog/post.html", line 3, in top-level template code
+    {% from 'bootstrap/pagination' import render_pagination %}
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: bootstrap/pagination
+2018-12-01 12:32:10,146 - flask.app - ERROR - Exception on /post/91 [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangchao/Documents/myblog/blueprints/blog.py", line 76, in show_post
+    return render_template('blog/post.html', post=post, pagination=pagination, form=form, comments=comments)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/wangchao/Documents/myblog/templates/blog/post.html", line 3, in top-level template code
+    {% from 'bootstrap/pagination' import render_pagination %}
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: bootstrap/pagination
+2018-12-01 12:34:45,149 - flask.app - ERROR - Exception on /post/ [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/ctx.py", line 336, in match_request
+    self.url_adapter.match(return_rule=True)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 1581, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1713, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1644, in handle_http_exception
+    return handler(e)
+  File "/Users/wangchao/Documents/myblog/app.py", line 106, in page_not_found
+    return render_template('errors/404.html'), 404
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: errors/404.html
+2018-12-01 12:34:45,213 - flask.app - ERROR - Exception on /post/ [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/ctx.py", line 336, in match_request
+    self.url_adapter.match(return_rule=True)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 1581, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1713, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1644, in handle_http_exception
+    return handler(e)
+  File "/Users/wangchao/Documents/myblog/app.py", line 106, in page_not_found
+    return render_template('errors/404.html'), 404
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: errors/404.html
+2018-12-01 12:34:50,244 - flask.app - ERROR - Exception on /post/ [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/ctx.py", line 336, in match_request
+    self.url_adapter.match(return_rule=True)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 1581, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1713, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1644, in handle_http_exception
+    return handler(e)
+  File "/Users/wangchao/Documents/myblog/app.py", line 106, in page_not_found
+    return render_template('errors/404.html'), 404
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: errors/404.html
+2018-12-01 12:45:55,258 - flask.app - ERROR - Exception on /static/js/popper.min.js.map [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/helpers.py", line 976, in send_static_file
+    cache_timeout=cache_timeout)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/helpers.py", line 709, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1713, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1644, in handle_http_exception
+    return handler(e)
+  File "/Users/wangchao/Documents/myblog/app.py", line 106, in page_not_found
+    return render_template('errors/404.html'), 404
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: errors/404.html
+2018-12-01 12:50:27,722 - flask.app - ERROR - Exception on /post/ [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/ctx.py", line 336, in match_request
+    self.url_adapter.match(return_rule=True)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 1581, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1713, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1644, in handle_http_exception
+    return handler(e)
+  File "/Users/wangchao/Documents/myblog/app.py", line 106, in page_not_found
+    return render_template('errors/404.html'), 404
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: errors/404.html
+2018-12-01 12:50:28,004 - flask.app - ERROR - Exception on /post/ [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/ctx.py", line 336, in match_request
+    self.url_adapter.match(return_rule=True)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 1581, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1713, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1644, in handle_http_exception
+    return handler(e)
+  File "/Users/wangchao/Documents/myblog/app.py", line 106, in page_not_found
+    return render_template('errors/404.html'), 404
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: errors/404.html
+2018-12-01 12:50:33,030 - flask.app - ERROR - Exception on /post/ [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/ctx.py", line 336, in match_request
+    self.url_adapter.match(return_rule=True)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 1581, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1713, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1644, in handle_http_exception
+    return handler(e)
+  File "/Users/wangchao/Documents/myblog/app.py", line 106, in page_not_found
+    return render_template('errors/404.html'), 404
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: errors/404.html
+2018-12-01 12:51:03,056 - flask.app - ERROR - Exception on /post/ [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/ctx.py", line 336, in match_request
+    self.url_adapter.match(return_rule=True)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 1581, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1713, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1644, in handle_http_exception
+    return handler(e)
+  File "/Users/wangchao/Documents/myblog/app.py", line 106, in page_not_found
+    return render_template('errors/404.html'), 404
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: errors/404.html
+2018-12-01 12:52:03,081 - flask.app - ERROR - Exception on /post/ [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/ctx.py", line 336, in match_request
+    self.url_adapter.match(return_rule=True)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 1581, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1713, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1644, in handle_http_exception
+    return handler(e)
+  File "/Users/wangchao/Documents/myblog/app.py", line 106, in page_not_found
+    return render_template('errors/404.html'), 404
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: errors/404.html
+2018-12-01 12:53:09,364 - flask.app - ERROR - Exception on /post/ [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/ctx.py", line 336, in match_request
+    self.url_adapter.match(return_rule=True)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 1581, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1713, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1644, in handle_http_exception
+    return handler(e)
+  File "/Users/wangchao/Documents/myblog/app.py", line 106, in page_not_found
+    return render_template('.errors/404.html'), 404
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: .errors/404.html
+2018-12-01 12:59:05,865 - flask.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangchao/Documents/myblog/blueprints/blog.py", line 18, in index
+    return render_template('blog/index.html', pagination=pagination, posts=posts)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/wangchao/Documents/myblog/templates/blog/index.html", line 3, in top-level template code
+    {% from 'bootstrap/pagination.html' import render_pager %}
+  File "/Users/wangchao/Documents/myblog/templates/base.html", line 85, in top-level template code
+    {% block content %}{% endblock content %}
+  File "/Users/wangchao/Documents/myblog/templates/blog/index.html", line 14, in block "content"
+    {% include 'blog/_posts.html' %}
+  File "/Users/wangchao/Documents/myblog/templates/blog/_posts.html", line 10, in top-level template code
+    标签：<a href="{{ url_for('.show_category', category_id=post.category.id)}}">{{ post.category.name }}</a>
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/helpers.py", line 345, in url_for
+    force_external=external)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 1774, in build
+    rv = self._partial_build(endpoint, values, method, append_unknown)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 1689, in _partial_build
+    append_unknown)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 1697, in _partial_build
+    rv = rule.build(values, append_unknown)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 809, in build
+    add(self._converters[data].to_url(values[data]))
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 1034, in to_url
+    value = self.num_convert(value)
+jinja2.exceptions.UndefinedError: 'None' has no attribute 'id'
+2018-12-01 12:59:05,943 - flask.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangchao/Documents/myblog/blueprints/blog.py", line 18, in index
+    return render_template('blog/index.html', pagination=pagination, posts=posts)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/wangchao/Documents/myblog/templates/blog/index.html", line 3, in top-level template code
+    {% from 'bootstrap/pagination.html' import render_pager %}
+  File "/Users/wangchao/Documents/myblog/templates/base.html", line 85, in top-level template code
+    {% block content %}{% endblock content %}
+  File "/Users/wangchao/Documents/myblog/templates/blog/index.html", line 14, in block "content"
+    {% include 'blog/_posts.html' %}
+  File "/Users/wangchao/Documents/myblog/templates/blog/_posts.html", line 10, in top-level template code
+    标签：<a href="{{ url_for('.show_category', category_id=post.category.id)}}">{{ post.category.name }}</a>
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/helpers.py", line 345, in url_for
+    force_external=external)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 1774, in build
+    rv = self._partial_build(endpoint, values, method, append_unknown)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 1689, in _partial_build
+    append_unknown)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 1697, in _partial_build
+    rv = rule.build(values, append_unknown)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 809, in build
+    add(self._converters[data].to_url(values[data]))
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 1034, in to_url
+    value = self.num_convert(value)
+jinja2.exceptions.UndefinedError: 'None' has no attribute 'id'
+2018-12-01 12:59:10,990 - flask.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangchao/Documents/myblog/blueprints/blog.py", line 18, in index
+    return render_template('blog/index.html', pagination=pagination, posts=posts)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/wangchao/Documents/myblog/templates/blog/index.html", line 3, in top-level template code
+    {% from 'bootstrap/pagination.html' import render_pager %}
+  File "/Users/wangchao/Documents/myblog/templates/base.html", line 85, in top-level template code
+    {% block content %}{% endblock content %}
+  File "/Users/wangchao/Documents/myblog/templates/blog/index.html", line 14, in block "content"
+    {% include 'blog/_posts.html' %}
+  File "/Users/wangchao/Documents/myblog/templates/blog/_posts.html", line 10, in top-level template code
+    标签：<a href="{{ url_for('.show_category', category_id=post.category.id)}}">{{ post.category.name }}</a>
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/helpers.py", line 345, in url_for
+    force_external=external)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 1774, in build
+    rv = self._partial_build(endpoint, values, method, append_unknown)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 1689, in _partial_build
+    append_unknown)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 1697, in _partial_build
+    rv = rule.build(values, append_unknown)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 809, in build
+    add(self._converters[data].to_url(values[data]))
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 1034, in to_url
+    value = self.num_convert(value)
+jinja2.exceptions.UndefinedError: 'None' has no attribute 'id'
+2018-12-01 12:59:41,034 - flask.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangchao/Documents/myblog/blueprints/blog.py", line 18, in index
+    return render_template('blog/index.html', pagination=pagination, posts=posts)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/wangchao/Documents/myblog/templates/blog/index.html", line 3, in top-level template code
+    {% from 'bootstrap/pagination.html' import render_pager %}
+  File "/Users/wangchao/Documents/myblog/templates/base.html", line 85, in top-level template code
+    {% block content %}{% endblock content %}
+  File "/Users/wangchao/Documents/myblog/templates/blog/index.html", line 14, in block "content"
+    {% include 'blog/_posts.html' %}
+  File "/Users/wangchao/Documents/myblog/templates/blog/_posts.html", line 10, in top-level template code
+    标签：<a href="{{ url_for('.show_category', category_id=post.category.id)}}">{{ post.category.name }}</a>
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/helpers.py", line 345, in url_for
+    force_external=external)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 1774, in build
+    rv = self._partial_build(endpoint, values, method, append_unknown)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 1689, in _partial_build
+    append_unknown)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 1697, in _partial_build
+    rv = rule.build(values, append_unknown)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 809, in build
+    add(self._converters[data].to_url(values[data]))
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 1034, in to_url
+    value = self.num_convert(value)
+jinja2.exceptions.UndefinedError: 'None' has no attribute 'id'
+2018-12-01 13:00:41,084 - flask.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangchao/Documents/myblog/blueprints/blog.py", line 18, in index
+    return render_template('blog/index.html', pagination=pagination, posts=posts)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/wangchao/Documents/myblog/templates/blog/index.html", line 3, in top-level template code
+    {% from 'bootstrap/pagination.html' import render_pager %}
+  File "/Users/wangchao/Documents/myblog/templates/base.html", line 85, in top-level template code
+    {% block content %}{% endblock content %}
+  File "/Users/wangchao/Documents/myblog/templates/blog/index.html", line 14, in block "content"
+    {% include 'blog/_posts.html' %}
+  File "/Users/wangchao/Documents/myblog/templates/blog/_posts.html", line 10, in top-level template code
+    标签：<a href="{{ url_for('.show_category', category_id=post.category.id)}}">{{ post.category.name }}</a>
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/helpers.py", line 345, in url_for
+    force_external=external)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 1774, in build
+    rv = self._partial_build(endpoint, values, method, append_unknown)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 1689, in _partial_build
+    append_unknown)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 1697, in _partial_build
+    rv = rule.build(values, append_unknown)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 809, in build
+    add(self._converters[data].to_url(values[data]))
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 1034, in to_url
+    value = self.num_convert(value)
+jinja2.exceptions.UndefinedError: 'None' has no attribute 'id'
+2018-12-01 13:03:53,221 - flask.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangchao/Documents/myblog/blueprints/blog.py", line 18, in index
+    return render_template('blog/index.html', pagination=pagination, posts=posts)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/wangchao/Documents/myblog/templates/blog/index.html", line 3, in top-level template code
+    {% from 'bootstrap/pagination.html' import render_pager %}
+  File "/Users/wangchao/Documents/myblog/templates/base.html", line 85, in top-level template code
+    {% block content %}{% endblock content %}
+  File "/Users/wangchao/Documents/myblog/templates/blog/index.html", line 14, in block "content"
+    {% include 'blog/_posts.html' %}
+  File "/Users/wangchao/Documents/myblog/templates/blog/_posts.html", line 10, in top-level template code
+    标签：<a href="{{ url_for('.show_category', category_id=post.category.id)}}">{{ post.category.name }}</a>
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/helpers.py", line 345, in url_for
+    force_external=external)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 1774, in build
+    rv = self._partial_build(endpoint, values, method, append_unknown)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 1689, in _partial_build
+    append_unknown)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 1697, in _partial_build
+    rv = rule.build(values, append_unknown)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 809, in build
+    add(self._converters[data].to_url(values[data]))
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 1034, in to_url
+    value = self.num_convert(value)
+jinja2.exceptions.UndefinedError: 'None' has no attribute 'id'
+2018-12-01 13:03:54,759 - flask.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangchao/Documents/myblog/blueprints/blog.py", line 18, in index
+    return render_template('blog/index.html', pagination=pagination, posts=posts)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/wangchao/Documents/myblog/templates/blog/index.html", line 3, in top-level template code
+    {% from 'bootstrap/pagination.html' import render_pager %}
+  File "/Users/wangchao/Documents/myblog/templates/base.html", line 85, in top-level template code
+    {% block content %}{% endblock content %}
+  File "/Users/wangchao/Documents/myblog/templates/blog/index.html", line 14, in block "content"
+    {% include 'blog/_posts.html' %}
+  File "/Users/wangchao/Documents/myblog/templates/blog/_posts.html", line 10, in top-level template code
+    标签：<a href="{{ url_for('.show_category', category_id=post.category.id)}}">{{ post.category.name }}</a>
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/helpers.py", line 345, in url_for
+    force_external=external)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 1774, in build
+    rv = self._partial_build(endpoint, values, method, append_unknown)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 1689, in _partial_build
+    append_unknown)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 1697, in _partial_build
+    rv = rule.build(values, append_unknown)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 809, in build
+    add(self._converters[data].to_url(values[data]))
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 1034, in to_url
+    value = self.num_convert(value)
+jinja2.exceptions.UndefinedError: 'None' has no attribute 'id'
+2018-12-01 13:08:54,899 - flask.app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/wangchao/Documents/myblog/blueprints/blog.py", line 18, in index
+    return render_template('blog/index.html', pagination=pagination, posts=posts)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/wangchao/Documents/myblog/templates/blog/index.html", line 3, in top-level template code
+    {% from 'bootstrap/pagination.html' import render_pager %}
+  File "/Users/wangchao/Documents/myblog/templates/base.html", line 85, in top-level template code
+    {% block content %}{% endblock content %}
+  File "/Users/wangchao/Documents/myblog/templates/blog/index.html", line 14, in block "content"
+    {% include 'blog/_posts.html' %}
+  File "/Users/wangchao/Documents/myblog/templates/blog/_posts.html", line 10, in top-level template code
+    标签：<a href="{{ url_for('.show_category', category_id=post.category.id)}}">{{ post.category.name }}</a>
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/flask/helpers.py", line 345, in url_for
+    force_external=external)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 1774, in build
+    rv = self._partial_build(endpoint, values, method, append_unknown)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 1689, in _partial_build
+    append_unknown)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 1697, in _partial_build
+    rv = rule.build(values, append_unknown)
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 809, in build
+    add(self._converters[data].to_url(values[data]))
+  File "/Users/wangchao/myblog/lib/python3.6/site-packages/werkzeug/routing.py", line 1034, in to_url
+    value = self.num_convert(value)
+jinja2.exceptions.UndefinedError: 'None' has no attribute 'id'
